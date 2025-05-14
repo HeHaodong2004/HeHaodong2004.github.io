@@ -1,6 +1,6 @@
 ---
 title: "Multi-Agent Search in Adversarial Environments"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: "Short description of portfolio item number 1<br/><img src='/images/adversarial1.png'>"
 collection: portfolio
 ---
 
@@ -21,5 +21,8 @@ To tackle this, I developed **ViPER**, a novel framework that leverages **graph 
 ViPER allows agents to dynamically balance exploration and guarding tasks, demonstrating emergent cooperation that surpasses existing non-learning methods both in simulation and real-world quadrotor deployments.
 
 ---
+
+### Project Image
+![ViPER Project](/images/adversarial2.png)
 
 This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
