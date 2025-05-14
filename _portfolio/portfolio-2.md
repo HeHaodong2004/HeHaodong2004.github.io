@@ -1,6 +1,6 @@
 ---
 title: "Map-Prediction Guided Planning under Uncertainty"
-excerpt: "<br/><img src='/images/cogniplan1.png'>"
+excerpt: "<br/><img src='/images/inpainting1.png'>"
 collection: portfolio
 ---
 
