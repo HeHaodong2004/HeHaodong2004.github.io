@@ -22,4 +22,4 @@ CogniPlan enables robots to infer multiple plausible layouts from partial observ
 
 We demonstrated CogniPlan's effectiveness in both **exploration** and **point-goal navigation** tasks, significantly outperforming state-of-the-art planners across challenging benchmark datasets and realistic indoor scenarios **without any finetuning**.
 
-Moreover, we extended this approach to **visibility-based pursuit-evasion tasks**, where robots must cooperate to detect intelligent and evasive targets under extreme uncertainty, validating the method's generality and scalability.
+
