@@ -11,8 +11,8 @@ main:
   #- title: "Publications"
   #  url: /publications/     
     
-  - title: "projects"
-    url: /projects/
+  - title: "Portfolio"
+    url: /portfolio/
     
   # - title: "CV"
   #   url: /cv-json/
