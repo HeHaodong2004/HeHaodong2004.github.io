@@ -4,6 +4,8 @@ excerpt: "Short description of portfolio item number 1<br/><img src='/images/adv
 collection: portfolio
 ---
 
+![ViPER Project](/images/adversarial2.png)
+
 ### Overview
 The problem of multi-agent search in adversarial environments is fundamentally different from traditional multi-agent path finding tasks. In such scenarios, robots must operate in dynamic and uncertain environments where targets may behave strategically to avoid detection, such as hiding behind obstacles or exploiting blind spots.
 
@@ -22,6 +24,4 @@ ViPER allows agents to dynamically balance exploration and guarding tasks, demon
 
 ---
 
-### Project Image
-![ViPER Project](/images/adversarial2.png)
  
