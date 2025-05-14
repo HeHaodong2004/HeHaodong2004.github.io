@@ -1,6 +1,6 @@
 ---
 title: "Multi-Agent Search in Adversarial Environments"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/adversarial1.png'>"
+excerpt: "<br/><img src='/images/adversarial1.png'>"
 collection: portfolio
 ---
 
