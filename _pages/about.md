@@ -1,11 +1,4 @@
----
-permalink: /
-title: "He Haodong | Research on Multi-Agent Systems & Robot Learning"
-author_profile: true
-redirect_from:
-  - /about/
-  - /about.html
----
+
 
 ## About Me
 
