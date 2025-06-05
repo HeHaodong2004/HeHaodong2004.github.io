@@ -7,8 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an undergraduate student from **Tongji University**, currently working as a research assistant at the [MARMot Lab](https://www.marmotlab.org/), **National University of Singapore**, under the supervision of [Guillaume Sartoretti](https://cde.nus.edu.sg/me/staff/sartoretti-guillaume-a/).  
-In the summer of 2025, I am also a research intern at the [Search-Based Planning Lab (SBPL)](http://www.sbpl.net/), **Carnegie Mellon University**, supervised by [Maxim Likhachev](https://www.cs.cmu.edu/~maxim/).
+I am an undergraduate student from **Tongji University**, currently working as a research assistant at the [MARMot Lab](https://www.marmotlab.org/), **National University of Singapore**, under the supervision of [Guillaume Sartoretti](https://cde.nus.edu.sg/me/staff/sartoretti-guillaume-a/). In the summer of 2025, I am also a research intern at the [Search-Based Planning Lab (SBPL)](http://www.sbpl.net/), **Carnegie Mellon University**, supervised by [Maxim Likhachev](https://www.cs.cmu.edu/~maxim/).
 
 My research interests include:
 - **Multi-agent systems**
