@@ -33,10 +33,10 @@ My research interests include:
 - Second Prize in Chinese Mathematics Competitions
 - Second Prize in International University Student Engineering Mechanics Competition
 
-## Publications (Under Review)
 
-- *ViPER: Visibility-based Pursuit-Evasion via Reinforcement Learning* (Target: TRO)
-- *CogniPlan: Uncertainty-Guided Path Planning with Conditional Generative Layout Prediction* (Submitted to CoRL 2025)
+## Selected Publications
+- **ViPER**: *Visibility-based Pursuit-Evasion via Reinforcement Learning* (Target: IEEE TRO)  
+- **[CogniPlan](https://hehaodong2004.github.io/CogniPlan/)**: *Uncertainty-Guided Path Planning with Conditional Generative Layout Prediction*  (Accepted at CoRL 2025)
 
 ## Contact
 
