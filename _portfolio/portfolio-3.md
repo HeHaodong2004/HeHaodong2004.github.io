@@ -15,6 +15,7 @@ I am interested in how agents can proactively balance **information aggregation*
 ---
 
 ### Focus Project: Learning-Based Exploration with Map Prediction and Graph Reasoning
+(*Joint work with [Yizhuo Wang](https://yizhuo-wang.com/) and [Derek Ming Siang Tan](https://www.derektanmingsiang.com/)*)
 
 To address these challenges, I am developing a **learning-based framework** that combines **map prediction**, **graph neural networks**, and **deep reinforcement learning**.
 
