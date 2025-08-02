@@ -14,6 +14,8 @@ This creates unique challenges that go beyond solving path conflicts and deadloc
 ---
 
 ### Focus Project: Visibility-Based Pursuit-Evasion (ViPER)
+(*Joint work with [Yizhuo Wang](https://yizhuo-wang.com/)*)
+
 Within this broader context, I chose to focus on the **visibility-based pursuit-evasion** problem as a representative and challenging entry point into adversarial search.
 
 In this task, a team of pursuers must detect evaders that can move arbitrarily fast and are aware of the pursuers' strategies, often in environments with complex occlusions and unknown layouts.
