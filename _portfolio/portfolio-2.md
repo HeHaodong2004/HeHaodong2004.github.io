@@ -15,6 +15,8 @@ My research focuses on leveraging map predictions to bridge the gap between inco
 ---
 
 ### Focus Project: CogniPlan: Uncertainty-Guided Path Planning with Conditional Layout Prediction
+(*Joint work with [Yizhuo Wang](https://yizhuo-wang.com/)*)
+
 
 As part of this research direction, I developed **CogniPlan**, a planning framework that integrates **conditional generative inpainting models** with **graph attention-based reasoning**.
 
