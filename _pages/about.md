@@ -36,7 +36,7 @@ My research interests include:
 
 ## Selected Publications
 - **ViPER**: *Visibility-based Pursuit-Evasion via Reinforcement Learning* (Target: IEEE TRO)  
-- **[CogniPlan](https://hehaodong2004.github.io/CogniPlan/)**: *Uncertainty-Guided Path Planning with Conditional Generative Layout Prediction*  (Accepted at CoRL 2025)
+- **[CogniPlan](https://yizhuo-wang.com/cogniplan/)**: *Uncertainty-Guided Path Planning with Conditional Generative Layout Prediction*  (Accepted at CoRL 2025)
 
 ## Contact
 
