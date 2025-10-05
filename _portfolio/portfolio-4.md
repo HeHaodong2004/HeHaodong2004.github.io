@@ -6,7 +6,7 @@ collection: portfolio
 
 ![CBS Protocol Project](/images/Cantwell@basic.scen_n7_s117_custom.gif)  
 
-<span style="font-size:0.2em; color:#aaa;">
+<span style="font-size:0.7em; color:#aaa;">
 Source: Veerapaneni R, Tang A, He H, et al. <i>Conflict-Based Search as a Protocol: A Multi-Agent Motion Planning Protocol for Heterogeneous Agents, Solvers, and Independent Tasks</i>. arXiv:2510.00425, 2025.
 </span>
 
