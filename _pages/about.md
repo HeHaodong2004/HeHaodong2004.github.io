@@ -37,6 +37,7 @@ My research interests include:
 ## Selected Publications
 - **ViPER**: *Visibility-based Pursuit-Evasion via Reinforcement Learning* (Target: IEEE TRO)  
 - **[CogniPlan](https://yizhuo-wang.com/cogniplan/)**: *Uncertainty-Guided Path Planning with Conditional Generative Layout Prediction*  (Accepted at CoRL 2025)
+- **[Conflict-Based Search as a Protocol](https://rishi-v.github.io/CBS-Protocol/)**: *A Multi-Agent Motion Planning Protocol for Heterogeneous Agents, Solvers, and Independent Tasks*  (Submit to ICRA 2026)
 
 ## Contact
 
