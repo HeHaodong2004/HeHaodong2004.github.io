@@ -1,10 +1,14 @@
 ---
 title: "Heterogeneous Multi-Agent Systems under Communication and Planning Constraints"
-excerpt: "<br/><img src='/images/cbs1.png'>"
+excerpt: "<br/><img src='/images/cbs.png'>"
 collection: portfolio
 ---
 
-![CBS Protocol Project](/images/Cantwell@basic.scen_n7_s117_custom.mp4)
+![CBS Protocol Project](/images/Cantwell@basic.scen_n7_s117_custom.gif)  
+
+<span style="font-size:0.2em; color:#aaa;">
+Source: Veerapaneni R, Tang A, He H, et al. <i>Conflict-Based Search as a Protocol: A Multi-Agent Motion Planning Protocol for Heterogeneous Agents, Solvers, and Independent Tasks</i>. arXiv:2510.00425, 2025.
+</span>
 
 ### Big Picture: Heterogeneous Multi-Agent Systems
 
