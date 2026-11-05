@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-I am a final-year B.Eng. student in Engineering Mechanics at **Tongji University**. I work on **multi-agent robot learning and search-based planning** for navigation and coordination under partial observability.
+I am a PhD student at [Imperial College London](https://www.imperial.ac.uk/) under the supervision of [Prof. Panagiotis Angeloudis](https://profiles.imperial.ac.uk/p.angeloudis). I received my B.Eng. from **Tongji University**.
 
-I am currently a research assistant at the [MARMot Lab](https://www.marmotlab.org/), **National University of Singapore**, advised by [Guillaume Sartoretti](https://cde.nus.edu.sg/me/staff/sartoretti-guillaume-a/). In **Summer 2025**, I was a research intern at the [Search-Based Planning Lab (SBPL)](http://www.sbpl.net/), **Carnegie Mellon University**, advised by [Maxim Likhachev](https://www.cs.cmu.edu/~maxim/).
+Previously, I was a research assistant at the [MARMot Lab](https://www.marmotlab.org/), **National University of Singapore**, advised by [Prof. Guillaume Sartoretti](https://cde.nus.edu.sg/me/staff/sartoretti-guillaume-a/). In **Summer 2025**, I was a research intern at the [Search-Based Planning Lab (SBPL)](https://www.sbpl.net/), **Carnegie Mellon University**, where I received guidance from [Prof. Maxim Likhachev](https://www.cs.cmu.edu/~maxim/) and [Prof. Jiaoyang Li](https://jiaoyangli.me/).
 
-**Research interests:** multi-agent systems, robot learning, path planning.
+**Research interests:** Robot learning, decision-making under uncertainty, and planning and control.
 
 ---
 
@@ -26,7 +26,6 @@ I am currently a research assistant at the [MARMot Lab](https://www.marmotlab.or
 ## Selected Publications
 - **[CogniPlan](https://yizhuo-wang.com/cogniplan/)**: *Uncertainty-Guided Path Planning with Conditional Generative Layout Prediction* (**CoRL 2025**)  
 - **[Conflict-Based Search as a Protocol](https://rishi-v.github.io/CBS-Protocol/)**: *A Multi-Agent Motion Planning Protocol for Heterogeneous Agents, Solvers, and Independent Tasks* (**ICRA 2026**)  
-- **ViPER**: *Visibility-based Pursuit-Evasion via Reinforcement Learning* (Target: **IEEE TRO**)  
 
 ---
 
