@@ -8,69 +8,65 @@ tags:
   - decision-making
 ---
 
-A robot approaches a blind corner. Someone may be moving on the other side, but the robot cannot see them yet. Should it slow down, move forward to get a better view, or wait?
+Choosing a research problem is often harder than choosing a method. A problem can sound important while hiding several different questions, only some of which may be worth pursuing. Before committing to an algorithm, I find it useful to ask: **what makes this problem difficult, and under what conditions does that difficulty matter?**
 
-There are many ways to make this problem difficult: occlusion, unpredictable motion, limited braking, delayed sensing, and an imperfect planner. When a robot fails, which of these actually matters? And would improving one of them change the decision?
+Here are some practices I have been using to turn broad questions into more concrete research problems. They are not a recipe; they are a way to make my assumptions easier to test and my next steps easier to choose.
 
-I have been using questions like these to explore how I want to do research. My instinct is to start by making the world smaller: turn a complex situation into a few controlled changes, build a model that can challenge my assumptions, and map out where the answers change. This note describes that process, using an ongoing study of navigation around occlusions as an example.
+## Turn a broad question into controllable factors
 
-## From a complicated scene to a set of switches
+When a problem feels too complicated to reason about, I try to identify a small number of factors that might explain the behavior I care about. I then ask what it would mean to change each factor while keeping the others fixed.
 
-The first step is to choose what to simplify and what to preserve. For the blind corner, I might start with three factors:
+A useful first experiment is often a switch: compare a setting where a capability or constraint is present with one where it is absent. The switch need not be realistic in isolation. Its purpose is to make a comparison interpretable.
 
-- **Partial observability (P):** is the other agent visible, or hidden until the robot reaches a sight line?
-- **Dynamics (D):** does the other agent follow a known motion, or can its behavior change unpredictably?
-- **Robot capability (R):** can the robot stop or change its motion quickly enough after it sees the other agent?
+The hard part is deciding what the switch actually changes. If changing it also changes the objective, the available actions, or the difficulty of another part of the task, the result may have several explanations. Writing down these choices before running the experiment makes disagreements much easier to resolve.
 
-These are not complete descriptions of the real world. They are experimental switches: a way to create related worlds that differ in controlled respects. Their definitions matter. For example, an agent moving along a known trajectory is dynamic in ordinary language, but in a particular experiment the D switch might instead compare *known* and *stochastic* motion. I need to say which comparison I am making.
+Binary switches are only a starting point. Once I have a clearer hypothesis, I vary the underlying quantities continuously. This lets me ask not just *whether* something matters, but *how much*, and whether its effect changes across conditions.
 
-Once the switches expose a mechanism, they can be replaced or supplemented by continuous parameters: braking strength, time spent out of sight, the rate of changes in motion, or observation delay. The objective is not to make everything binary; it is to make the first question precise enough to answer.
+## Build the smallest experiment that could change your mind
 
-## The smallest world that can prove me wrong
+A minimal experiment should preserve the mechanism being tested while removing details that make its outcome hard to interpret. Depending on the question, that might mean a mathematical model, a small simulation, or a carefully chosen subset of a larger system.
 
-I like minimal models because they make assumptions visible. A short approach to a single blind corner may be enough to ask whether a robot should slow down before it sees a moving obstacle. It can also make a tempting intuition fail.
+I try to write down a prediction before looking at the result: what do I expect to happen, and what outcome would make me reconsider the explanation? If all possible outcomes can be fitted into the original story, the experiment is unlikely to teach me much.
 
-For instance, it is easy to assume that hidden, unpredictable motion must always make an extra observation valuable. But the answer depends on what the robot can do with that observation, when it arrives, and what sensing costs. If the same action is optimal regardless of what the robot learns, better information may not change the decision. If the robot can safely observe before it must commit, the loss from being temporarily blind may be small.
+A failed prediction is useful when it tells me which assumption was doing the work. It can also suggest a more precise question. Rather than asking whether a factor is *always* important, I can ask which conditions make it important and which make it irrelevant.
 
-A model should expose possibilities like these, rather than being constructed only to confirm the story I started with. A negative result can be useful: it tells me which conditions a proposed mechanism actually needs.
+## Use counterfactuals to understand the gap
 
-## What do the counterfactuals tell us?
+When a practical method performs poorly, I want to know what improvement is possible and what would be required to obtain it. An idealized reference, or *oracle*, can help, provided its advantage is clearly specified.
 
-An oracle is an idealized reference designed to answer a particular question. Different oracles answer different questions:
+For example, one oracle might have access to additional information. Another might have the same information as the practical method but be able to find an optimal decision. A third might have more time or a larger set of actions. These comparisons answer different questions, so I try to change one advantage at a time.
 
-- A decision-maker with the same observations but optimal computation helps probe the cost of an imperfect algorithm.
-- One that sees the obstacle's current state reveals the potential value of that additional observation.
-- One that knows the obstacle's future has a stronger advantage and answers a different question again.
+The size of the gap matters, but so does its sensitivity. Does the gap remain when assumptions change? Does it disappear under a reasonable baseline? Does an oracle's advantage depend on information or computational resources that a practical system could never obtain? A large gap is an invitation to investigate, not yet a guarantee that it can be closed.
 
-A gap to one reference does not automatically measure the cost of everything at once. Even an optimal-information gap depends on the objective, action set, timing and model assumptions. Conversely, a small gap under one set of assumptions does not prove that the practical problem is unimportant everywhere.
+## Look for interactions, not just individual effects
 
-I also want to know whether two sources of difficulty interact. Let **J(P, D)** be a cost under a specified choice of switches, with the remaining conditions held fixed. The two-factor interaction is:
+Two factors can each have a small effect on their own but matter a great deal together. They can also partly cancel each other. To see the difference, I compare all combinations rather than varying only one factor at a time.
 
-**I(P, D) = J(1, 1) − J(1, 0) − J(0, 1) + J(0, 0).**
+Let **Jₐᵦ** denote the cost when switches A and B take values *a* and *b*. One way to measure their interaction is:
 
-This compares the effect of changing P when D is on with its effect when D is off. If it is positive, the joint cost exceeds the sum of the two changes measured from the chosen baseline; if negative, it falls below that sum. Zero means the effects are additive for this particular measure and comparison. This is a finite-difference analogue of a mixed derivative, but its value can depend on how the switches, baseline and cost are defined.
+**Interaction = J₁₁ − J₁₀ − J₀₁ + J₀₀.**
 
-## From a single result to a map
+This asks whether the effect of changing A depends on the setting of B. The sign tells us whether the combined effect is greater or smaller than the sum of the individual effects, relative to the chosen baseline. A value near zero means the effects are approximately additive under that particular cost and comparison.
 
-A single experiment may tell me that a method works. A map can help me ask *where* and *why* it works.
+For continuous variables, mixed derivatives can express a related idea locally. Neither a derivative nor a finite difference is automatically an explanation: I still need to understand the mechanism behind it and check whether the comparison changes only what I intended.
+
+## Map where the answer changes
+
+A single result is a point in a larger space of possible conditions. I find it helpful to vary important parameters and visualize how the outcome changes across that space.
+
+The most interesting parts of a map are often the boundaries. Where does the preferred decision change? Where does a gap become large or small? Does an interaction change sign? Are the boundaries stable when I change the model or the numerical resolution?
 
 <figure>
-  <img src="{{ '/images/research-notes/blind-corner-regime-map.png' | relative_url }}" alt="A regime map showing different blind-corner maneuvers across obstacle randomness and robot commitment, with interaction-cost contours and hatched regions." loading="lazy">
-  <figcaption><strong>An example from an ongoing simplified blind-corner study.</strong> The horizontal axis is the rate of random direction changes multiplied by the time the obstacle is hidden; the vertical axis is braking distance at the initial speed divided by the distance available after the obstacle becomes visible. Colors show the model's preferred maneuver: orange = commit, green = slow to a critical speed and peek, blue = peek at normal speed, purple = slow before reaching the sight line. The thick line marks a commitment ratio of 1; thin contours show the P × D interaction cost in seconds. In the upper hatched region the approach is too short to brake to the critical speed; the right-hand hatched region is under-resolved at the chosen simulation time step. This is one model and one set of parameters, not a general map of real-world navigation.</figcaption>
+  <img src="{{ '/images/research-notes/blind-corner-regime-map.png' | relative_url }}" alt="An example regime map showing decision regions, cost contours, and hatched regions across two model parameters." loading="lazy">
+  <figcaption><small>An example from an ongoing simplified navigation study. The horizontal axis varies obstacle randomness; the vertical axis is the ratio of stopping distance to the distance available after visibility. Colors indicate preferred maneuvers; thin contours show an interaction cost. The upper hatching marks a limited approach distance, while the right-hand hatching marks a numerically under-resolved region. The map reflects one model and parameter choice.</small></figcaption>
 </figure>
 
-In this example, the horizontal line has a physical interpretation: at a ratio of one, the initial stopping distance matches the distance available after the sight line. The colors change across parts of that boundary because the available choices change. The thin contours ask a separate question: how large is the additional interaction cost in this particular model?
+I use *regime map* as a practical term for this kind of visualization. It can reveal policy changes, sensitivity, and regions worth investigating. A boundary in such a map is not necessarily a phase transition in the strict mathematical sense, and its location may depend on the assumptions used to construct it.
 
-The two need not have the same boundary. A threshold that changes what the robot can physically do does not by itself prove that the interaction cost suddenly becomes dominant at precisely that threshold. Likewise, a jagged boundary on a numerical grid may reflect resolution or model choices. That is why the hatched regions and the assumptions behind the figure matter.
+## Decide what deserves more work
 
-I think of these as **regime maps**: maps of conditions under which different decisions or mechanisms matter. They are inspired by phase diagrams, although a change in the preferred policy is not necessarily a phase transition in the strict mathematical sense.
+An experiment is most useful when it changes what I do next. If a gap is negligible across plausible conditions, I might look for a different problem. If it is large only in a narrow region, I want to know whether that region occurs in practice. If an effect is robust and its mechanism is clear, I can ask whether it suggests a better representation, decision rule, or algorithm.
 
-## From a map back to a research question
+I also want to move in the other direction: start with a failure that matters in the world, talk to people who encounter it, and use those observations to decide which factors to model. A clean abstraction is valuable only if its assumptions and predictions eventually meet evidence outside the abstraction.
 
-The map is not the final destination. It is a way to generate better questions.
-
-If the advantage of an oracle is substantial only in a narrow region, what makes that region special? If it persists across variations in dynamics and sensing, can a practical policy recover some of it? If a mechanism disappears after adding a realistic delay, was the original explanation too fragile, or did the delay reveal a different bottleneck?
-
-The next step is to put the model back in contact with the world: test whether its assumptions correspond to a real failure, add complexity selectively, and eventually check whether the proposed mechanism survives in simulation and on physical robots. Real-world needs also provide a separate starting point: an elegant boundary is more interesting when it explains a failure that someone actually encounters.
-
-I do not see this as a universal recipe. It is a way of delaying commitment to a solution until I understand the question better. The most valuable outcome may be a new algorithm, a useful bound, or the realization that the question I originally wanted to solve was not quite the right one.
+For me, the goal is not to draw a map for every problem. It is to make a better decision about what to work on: identify the assumptions, find the conditions that change the answer, and let the experiment challenge the original idea.
