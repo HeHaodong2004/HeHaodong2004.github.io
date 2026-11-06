@@ -11,7 +11,9 @@ I am a PhD student at [Imperial College London](https://www.imperial.ac.uk/) und
 
 Previously, I was a research assistant at the [MARMot Lab](https://www.marmotlab.org/), **National University of Singapore**, advised by [Prof. Guillaume Sartoretti](https://cde.nus.edu.sg/me/staff/sartoretti-guillaume-a/). In **Summer 2025**, I was a research intern at the [Search-Based Planning Lab (SBPL)](https://www.sbpl.net/), **Carnegie Mellon University**, where I received guidance from [Prof. Maxim Likhachev](https://www.cs.cmu.edu/~maxim/) and [Prof. Jiaoyang Li](https://jiaoyangli.me/).
 
-**Research interests:** Robot learning, decision-making under uncertainty, and planning and control.
+My current research explores **cross-embodiment robot learning**: how can robots with different dynamics and control capabilities learn from each other's experience? I am particularly interested in learning **transferable representations and unified policies** from heterogeneous robot data, enabling knowledge transfer across platforms while mitigating negative transfer.
+
+**Research interests:** Cross-embodiment robot learning, representation learning, and adaptive planning and control.
 
 ---
 
